@@ -1,28 +1,49 @@
-.App {
+html {
+  color: white;
+}
+
+.app-container {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  //   background-color: ;
 }
 
 .container {
-  height: 50vh;
+  width: 90%;
+  max-width: 450px;
+  height: 100%;
+  max-height: 600px;
   padding: 2em;
-  //   border: solid 1px black;
+  border-radius: 80px;
+  background-image: linear-gradient(to bottom left, #1f0f53, #771760);
+}
+
+.col {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
   gap: 2em;
 }
 
 button {
-  width: 80%;
-  margin: 0 auto;
+  border-radius: 100px;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: bold;
+  color: #771760;
+  background-color: #ffdb99;
+  border: none;
+}
+
+.title__date {
+  color: #ffdb99;
+}
+
+.title__night {
+  color: #ff5db2;
 }

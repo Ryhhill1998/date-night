@@ -61,24 +61,34 @@ const App = () => {
 
   const chooseDate = () => {
     const setting = settingOptions[randomNumber(0, settingOptions.length)];
-    setDateSetting(setting);
+    setDateSetting("Setting: " + setting);
     setting === "In" ? chooseInEvent() : chooseOutEvent();
   };
 
   return (
-    <div className="App">
+    <div className="app-container">
       <div className="container">
-        <div className="title-container">
-          <h1>DATENIGHT</h1>
-        </div>
-        <div className="main-container">
-          <h2 className="date-details">
-            {dateSetting ? `Setting: ${dateSetting}` : ""}
-          </h2>
-          <h2 className="date-details">{event}</h2>
-          <button className="search-btn" type="submit" onClick={chooseDate}>
-            Generate Date
-          </button>
+        <div className="col">
+          <div className="row">
+            <h1 className="title">
+              <span className="title__date">DATE</span>
+              <span className="title__night">NIGHT</span>
+            </h1>
+          </div>
+
+          <div className="row">
+            <h2 className="date-details">{dateSetting}</h2>
+          </div>
+
+          <div className="row">
+            <h2 className="date-details">{event}</h2>
+          </div>
+
+          <div className="row">
+            <button className="search-btn" type="submit" onClick={chooseDate}>
+              Generate Date
+            </button>
+          </div>
         </div>
       </div>
     </div>
