@@ -15,7 +15,7 @@ const App = () => {
     "Walk",
   ];
   const outFoodOptions = ["Italian", "Chinese"];
-  // const outActivitiesAndFood = ["Lane7", "Minigolf", "Point Blank"];
+  const outCombinedOptions = ["Lane7", "Minigolf", "Point Blank"];
 
   const [dateSetting, setDateSetting] = useState("");
 
@@ -29,15 +29,33 @@ const App = () => {
     const activity =
       inActivityOptions[randomNumber(0, inActivityOptions.length)];
     const food = inFoodOptions[randomNumber(0, inFoodOptions.length)];
-    const event = `${activity} and ${food}`;
+    const event = `Activity: ${activity} and ${food}`;
     setEvent(event);
   };
 
   const chooseOutEvent = () => {
-    const activity =
-      outActivityOptions[randomNumber(0, outActivityOptions.length)];
-    const food = outFoodOptions[randomNumber(0, outFoodOptions.length)];
-    const event = `${activity} and ${food}`;
+    const option = randomNumber(1, 4);
+    let event;
+    switch (option) {
+      case 1:
+        event = "Activity: ";
+        event += outActivityOptions[randomNumber(0, outActivityOptions.length)];
+        break;
+
+      case 2:
+        event = "Food: ";
+        event += outFoodOptions[randomNumber(0, outFoodOptions.length)];
+        break;
+
+      case 3:
+        event = "Activity and Food: ";
+        event += outCombinedOptions[randomNumber(0, outCombinedOptions.length)];
+        break;
+
+      default:
+        break;
+    }
+
     setEvent(event);
   };
 
@@ -49,12 +67,20 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>DATENIGHT</h1>
-      <button className="search-btn" type="submit" onClick={chooseDate}>
-        Generate Date
-      </button>
-      <h2>{dateSetting ? `Setting: ${dateSetting}` : ""}</h2>
-      <h2>{event ? `Event: ${event}` : ""}</h2>
+      <div className="container">
+        <div className="title-container">
+          <h1>DATENIGHT</h1>
+        </div>
+        <div className="main-container">
+          <h2 className="date-details">
+            {dateSetting ? `Setting: ${dateSetting}` : ""}
+          </h2>
+          <h2 className="date-details">{event}</h2>
+          <button className="search-btn" type="submit" onClick={chooseDate}>
+            Generate Date
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
