@@ -1,21 +1,35 @@
 import { useState } from "react";
 import "./App.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCloudMoon } from "@fortawesome/free-solid-svg-icons";
+
 const App = () => {
   const settingOptions = ["In", "Out"];
 
   const inActivityOptions = ["Film", "Series"];
   const inFoodOptions = ["Takeaway", "Cook"];
 
-  const outActivityOptions = [
-    "Hatchet Harry's",
-    "Minigolf",
-    "Lane7",
-    "Museum",
-    "Walk",
+  const outActivityOptions = ["Hatchet Harry's", "Minigolf", "Lane7", "Walk"];
+  const outFoodOptions = [
+    "Thali Tray",
+    "Geisha",
+    "Aveika",
+    "Lola Jeans",
+    "Vegano",
+    "Shijo Cafe",
+    "Veganatomy",
+    "Gingerino's",
+    "Simla",
+    "Pizza Punks",
+    "Chaophraya",
   ];
-  const outFoodOptions = ["Italian", "Chinese"];
-  const outCombinedOptions = ["Lane7", "Minigolf", "Point Blank"];
+  const outCombinedOptions = [
+    "Lane7",
+    "Minigolf",
+    "Point Blank",
+    "Discovery Museum and Pablo",
+  ];
 
   const [dateSetting, setDateSetting] = useState("");
 
@@ -71,6 +85,7 @@ const App = () => {
         <div className="col">
           <div className="row">
             <h1 className="title">
+              <FontAwesomeIcon icon={faCloudMoon} />
               <span className="title__date">DATE</span>
               <span className="title__night">NIGHT</span>
             </h1>
