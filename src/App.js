@@ -5,6 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudMoon } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
+  const [dateSetting, setDateSetting] = useState("");
+  const [activity, setActivity] = useState("");
+  const [food, setFood] = useState("");
+
+  const resetActivity = () => setActivity("n/a");
+  const resetFood = () => setFood("n/a");
+
   const settingOptions = ["In", "Out"];
 
   const inActivityOptions = ["Film", "Series"];
@@ -31,51 +38,42 @@ const App = () => {
     "Discovery Museum and Pablo",
   ];
 
-  const [dateSetting, setDateSetting] = useState("");
-
-  const [event, setEvent] = useState("");
-
   const randomNumber = (inclStart, exclEnd) => {
     return Math.floor(Math.random() * (exclEnd - inclStart)) + inclStart;
   };
 
   const chooseInEvent = () => {
+    resetActivity();
+    resetFood();
+
     const activity =
       inActivityOptions[randomNumber(0, inActivityOptions.length)];
     const food = inFoodOptions[randomNumber(0, inFoodOptions.length)];
-    const event = `Activity: ${activity} and ${food}`;
-    setEvent(event);
+    setActivity(activity);
+    setFood(food);
   };
 
   const chooseOutEvent = () => {
-    const option = randomNumber(1, 4);
-    let event;
-    switch (option) {
-      case 1:
-        event = "Activity: ";
-        event += outActivityOptions[randomNumber(0, outActivityOptions.length)];
-        break;
+    resetActivity();
+    resetFood();
 
-      case 2:
-        event = "Food: ";
-        event += outFoodOptions[randomNumber(0, outFoodOptions.length)];
-        break;
-
-      case 3:
-        event = "Activity and Food: ";
-        event += outCombinedOptions[randomNumber(0, outCombinedOptions.length)];
-        break;
-
-      default:
-        break;
+    const option = randomNumber(0, 3);
+    if (option === 0) {
+      setActivity(
+        outActivityOptions[randomNumber(0, outActivityOptions.length)]
+      );
+      return;
     }
-
-    setEvent(event);
+    if (option === 1) {
+      setFood(outFoodOptions[randomNumber(0, outFoodOptions.length)]);
+      return;
+    }
+    setActivity(outCombinedOptions[randomNumber(0, outCombinedOptions.length)]);
   };
 
   const chooseDate = () => {
     const setting = settingOptions[randomNumber(0, settingOptions.length)];
-    setDateSetting("Setting: " + setting);
+    setDateSetting(setting);
     setting === "In" ? chooseInEvent() : chooseOutEvent();
   };
 
@@ -92,11 +90,26 @@ const App = () => {
           </div>
 
           <div className="row">
-            <h2 className="date-details">{dateSetting}</h2>
+            <label>SETTING</label>
+            <input
+              className="date-details setting"
+              value={dateSetting}
+              readOnly
+            ></input>
           </div>
 
           <div className="row">
-            <h2 className="date-details">{event}</h2>
+            <label>ACTIVITY</label>
+            <input
+              className="date-details activity"
+              value={activity}
+              readOnly
+            ></input>
+          </div>
+
+          <div className="row">
+            <label>FOOD</label>
+            <input className="date-details food" value={food} readOnly></input>
           </div>
 
           <div className="row">

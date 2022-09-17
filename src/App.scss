@@ -11,8 +11,6 @@ html {
 }
 
 .container {
-  width: 90%;
-  max-width: 450px;
   height: 100%;
   max-height: 600px;
   padding: 2em;
@@ -24,19 +22,39 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 2em;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 button {
   border-radius: 100px;
-  padding: 1em 2em;
+  padding: 1em 1.5em;
   text-transform: uppercase;
   font-family: inherit;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #771760;
-  background-color: #ffdb99;
+  color: #ffdb99;
+  background-color: #ff5db2;
   border: none;
+  cursor: pointer;
+}
+
+.date-details {
+  min-width: 300px;
+  min-height: 40px;
+  border-radius: 16px;
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
 .title__date {
