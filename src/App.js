@@ -2,7 +2,11 @@ import { useState } from "react";
 import "./App.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloudMoon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCloudMoon,
+  faGear,
+  faArrowRightLong,
+} from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
   const [dateSetting, setDateSetting] = useState("");
@@ -113,9 +117,23 @@ const App = () => {
           </div>
 
           <div className="row">
-            <button className="search-btn" type="submit" onClick={chooseDate}>
-              Generate Date
-            </button>
+            <div className="btn-container">
+              <button
+                className="btn search-btn"
+                type="button"
+                onClick={chooseDate}
+              >
+                Generate Date{" "}
+                <FontAwesomeIcon className="icon" icon={faArrowRightLong} />
+              </button>
+              <button
+                className="btn settings-btn"
+                type="button"
+                onClick={() => {}}
+              >
+                <FontAwesomeIcon className="icon" icon={faGear} />
+              </button>
+            </div>
           </div>
         </div>
       </div>

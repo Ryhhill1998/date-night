@@ -11,10 +11,9 @@ html {
 }
 
 .container {
-  height: 100%;
-  max-height: 600px;
-  padding: 2em;
-  border-radius: 80px;
+  height: 80%;
+  max-height: 700px;
+  width: 100%;
 }
 
 .col {
@@ -23,10 +22,11 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 2em;
 }
 
 .row {
+  width: 85%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,27 +34,64 @@ html {
   text-transform: uppercase;
 }
 
-button {
-  border-radius: 100px;
-  padding: 1em 1.5em;
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
   text-transform: uppercase;
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ffdb99;
-  background-color: #ff5db2;
   border: none;
   cursor: pointer;
 }
 
+.search-btn {
+  color: #771760;
+  background-color: #ffdb99;
+  padding: 1em 1.5em;
+  border-radius: 100px;
+
+  .icon {
+    display: none;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to top, #ffdb99, #ff5db2);
+    color: black;
+
+    & .icon {
+      display: inline-block;
+    }
+  }
+}
+
+.settings-btn {
+  background-color: grey;
+  border-radius: 50%;
+  padding: 1em;
+
+  .icon {
+    font-size: 2rem;
+    color: white;
+  }
+}
+
 .date-details {
-  min-width: 300px;
   min-height: 40px;
+  width: 100%;
   border-radius: 16px;
   margin-top: 1em;
   text-align: center;
   font-size: 1rem;
   font-family: inherit;
+}
+
+.title {
+  margin: 0;
 }
 
 .title__date {
