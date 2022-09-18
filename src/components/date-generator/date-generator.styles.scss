@@ -1,0 +1,57 @@
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.search-btn {
+  color: #771760;
+  background-color: #ffdb99;
+  padding: 1em 1.5em;
+  border-radius: 100px;
+
+  .icon {
+    display: none;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to top, #ffdb99, #ff5db2);
+    color: black;
+
+    & .icon {
+      display: inline-block;
+    }
+  }
+}
+
+.settings-btn {
+  background-color: grey;
+  border-radius: 50%;
+  padding: 1em;
+
+  .icon {
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+.title {
+  margin: 0;
+}
+
+.title__date {
+  color: #ffdb99;
+}
+
+.title__night {
+  color: #ff5db2;
+}
