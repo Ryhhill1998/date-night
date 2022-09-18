@@ -13,6 +13,7 @@ const defaultDateValues = {
   setting: "",
   activity: "",
   food: "",
+  both: false,
 };
 
 const Form = () => {

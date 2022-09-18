@@ -1,13 +1,9 @@
-.nav-container {
-  padding: 1em;
-  background-image: linear-gradient(to bottom left, #1f0f53, #771760);
-}
-
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3em;
+  height: 10vh;
 }
 
 .nav-icon {

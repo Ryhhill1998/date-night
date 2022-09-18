@@ -1,7 +1,7 @@
 import randomNumber from "../../helpers/random-number.js";
 
-const inActivityOptions = ["Film", "Series"];
-const inFoodOptions = ["Takeaway", "Cook"];
+const inActivityOptions = ["Film 🎬", "Series 📺"];
+const inFoodOptions = ["Takeaway 🥡", "Cook 👩‍🍳"];
 
 const chooseInEvent = () => {
   const activity = inActivityOptions[randomNumber(0, inActivityOptions.length)];
@@ -9,6 +9,7 @@ const chooseInEvent = () => {
   return {
     activity,
     food,
+    both: false,
   };
 };
 
