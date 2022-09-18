@@ -1,3 +1,35 @@
+.nav-container {
+  padding: 1em;
+  background-image: linear-gradient(to bottom left, #1f0f53, #771760);
+}
+
 .nav {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.nav-icon {
+  color: white;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.title {
+  margin: 0;
+}
+
+.title__date {
+  color: #ffdb99;
+}
+
+.title__night {
+  color: #ff5db2;
+}
+
+.nav__link {
+  text-decoration: none;
 }

@@ -5,11 +5,7 @@ import Input from "../input/input.component.jsx";
 import Button from "../button/button.component.jsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCloudMoon,
-  faGear,
-  faArrowRightLong,
-} from "@fortawesome/free-solid-svg-icons";
+import { faGear, faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 import "./date-generator.styles.scss";
 
@@ -32,14 +28,6 @@ const Form = () => {
     <div className="app-container">
       <div className="container">
         <div className="col">
-          <div className="row">
-            <h1 className="title">
-              <FontAwesomeIcon icon={faCloudMoon} />
-              <span className="title__date">DATE</span>
-              <span className="title__night">NIGHT</span>
-            </h1>
-          </div>
-
           <Input
             label="SETTING"
             inputOptions={{
