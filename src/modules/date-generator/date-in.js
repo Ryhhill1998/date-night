@@ -1,4 +1,4 @@
-import randomNumber from "../../helpers/random-number.js";
+import randomNumber from "../helpers/random-number.js";
 
 const inActivityOptions = ["Film 🎬", "Series 📺"];
 const inFoodOptions = ["Takeaway 🥡", "Cook 👩‍🍳"];

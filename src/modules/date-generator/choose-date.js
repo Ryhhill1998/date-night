@@ -1,7 +1,7 @@
 import randomNumber from "../helpers/random-number.js";
 
-import chooseInEvent from "../date-events/date-in/date-in";
-import chooseOutEvent from "../date-events/date-out/date-out";
+import chooseInEvent from "./date-in";
+import chooseOutEvent from "./date-out";
 
 const settingOptions = ["In", "Out"];
 

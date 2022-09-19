@@ -1,4 +1,4 @@
-import randomNumber from "../../helpers/random-number.js";
+import randomNumber from "../helpers/random-number.js";
 
 const outActivityOptions = [
   "Hatchet Harry's 🪓",

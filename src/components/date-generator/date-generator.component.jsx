@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import chooseDate from "../../modules/choose-date/choose-date.js";
+import chooseDate from "../../modules/date-generator/choose-date.js";
 import Input from "../input/input.component.jsx";
 import Button from "../button/button.component.jsx";
 
@@ -29,32 +29,38 @@ const Form = () => {
     <div className="app-container">
       <div className="container">
         <div className="col">
-          <Input
-            label="SETTING"
-            inputOptions={{
-              className: "date-details setting",
-              value: setting,
-              readOnly: true,
-            }}
-          ></Input>
+          <div className="row">
+            <Input
+              label="SETTING"
+              inputOptions={{
+                className: "date-details setting",
+                value: setting,
+                readOnly: true,
+              }}
+            ></Input>
+          </div>
 
-          <Input
-            label="ACTIVITY"
-            inputOptions={{
-              className: "date-details setting",
-              value: activity,
-              readOnly: true,
-            }}
-          ></Input>
+          <div className="row">
+            <Input
+              label="ACTIVITY"
+              inputOptions={{
+                className: "date-details setting",
+                value: activity,
+                readOnly: true,
+              }}
+            ></Input>
+          </div>
 
-          <Input
-            label="FOOD"
-            inputOptions={{
-              className: "date-details setting",
-              value: food,
-              readOnly: true,
-            }}
-          ></Input>
+          <div className="row">
+            <Input
+              label="FOOD"
+              inputOptions={{
+                className: "date-details setting",
+                value: food,
+                readOnly: true,
+              }}
+            ></Input>
+          </div>
 
           <div className="row">
             <div className="btn-container">
@@ -65,7 +71,7 @@ const Form = () => {
                   onClick: randomiseDateDetails,
                 }}
               >
-                Generate Date{" "}
+                Generate{" "}
                 <FontAwesomeIcon className="icon" icon={faArrowRightLong} />
               </Button>
               <Button

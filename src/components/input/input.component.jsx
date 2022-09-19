@@ -1,11 +1,12 @@
 import "./input.styles.scss";
+import { Fragment } from "react";
 
 const Input = ({ label, inputOptions }) => {
   return (
-    <div className="row">
+    <Fragment>
       <label>{label}</label>
       <input {...inputOptions}></input>
-    </div>
+    </Fragment>
   );
 };
 
